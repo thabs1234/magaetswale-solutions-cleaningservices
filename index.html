@@ -10,88 +10,90 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --navy: #0C142F;
-            --teal: #0A9D8E;
-            --charcoal: #1A1A1A;
-            --deep-charcoal: #0F0F0F;
-            --black: #000000;
-            --white: #FFFFFF;
-            --off-white: #F5F5F5;
-            --light-gray: #E0E0E0;
-            --gold: #C9A66B;
-            --gradient-primary: linear-gradient(135deg, #0C142F 0%, #0A9D8E 50%, #C9A66B 100%);
+            /* Brand Colors from Logo - Magaetswale Solutions */
+            --brand-red: #DC143C;
+            --brand-silver: #C0C0C0;
+            --brand-chrome: #E0E0E0;
+            --brand-black: #000000;
+            --brand-white: #FFFFFF;
+            --brand-red-dark: #A80F28;
+            --brand-silver-dark: #888888;
+            
+            /* Accent Colors */
+            --royal-blue: #0A1F44;
+            --trust-blue: #1E3A8A;
+            --light-gray: #F0F0F0;
+            --mid-gray: #E0E0E0;
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            background: var(--black);
-            color: var(--off-white);
+            background: var(--brand-white);
+            color: var(--brand-black);
             overflow-x: hidden;
             line-height: 1.6;
         }
         
-        /* Premium Navigation */
+        /* Premium Navigation - Brand Red & Silver */
         nav {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            backdrop-filter: blur(20px);
-            background: rgba(12, 20, 47, 0.85);
-            border-bottom: 1px solid rgba(200, 166, 107, 0.2);
-            padding: 18px 60px;
+            background: var(--brand-white);
+            border-bottom: 2px solid var(--brand-red);
+            padding: 20px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 16px;
         }
         
         .logo-image {
             height: 160px;
             width: auto;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
         }
         
         .logo-text {
             font-family: 'Playfair Display', serif;
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 900;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: 1px;
+            color: var(--brand-red);
+            letter-spacing: 2px;
         }
         
         .logo-span {
-            color: var(--gold);
+            color: var(--brand-black);
         }
         
         nav ul {
             display: flex;
-            gap: 40px;
+            gap: 45px;
             list-style: none;
         }
         
         nav a {
-            color: var(--light-gray);
+            color: var(--brand-black);
             text-decoration: none;
-            font-size: 15px;
-            font-weight: 500;
+            font-size: 16px;
+            font-weight: 600;
             letter-spacing: 1.5px;
-            transition: color 0.3s;
+            transition: all 0.3s;
             position: relative;
         }
         
         nav a:hover {
-            color: var(--white);
+            color: var(--brand-red);
         }
         
         nav a::after {
@@ -100,16 +102,17 @@
             bottom: -8px;
             left: 0;
             width: 0;
-            height: 2px;
-            background: var(--gold);
+            height: 3px;
+            background: var(--brand-red);
             transition: width 0.3s;
+            border-radius: 2px;
         }
         
         nav a:hover::after {
             width: 100%;
         }
         
-        /* Premium Hero Section */
+        /* Hero Section - Red & Black Excellence */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -121,9 +124,8 @@
             position: relative;
             overflow: hidden;
             background: 
-                linear-gradient(135deg, var(--navy) 0%, var(--charcoal) 100%),
-                radial-gradient(ellipse at top left, rgba(10, 157, 142, 0.08) 0%, transparent 40%),
-                radial-gradient(ellipse at bottom right, rgba(201, 166, 107, 0.03) 0%, transparent 40%);
+                linear-gradient(135deg, var(--brand-black) 0%, var(--royal-blue) 100%),
+                radial-gradient(ellipse at top left, rgba(220, 20, 60, 0.08) 0%, transparent 40%);
         }
         
         .hero h1 {
@@ -131,54 +133,49 @@
             font-size: clamp(48px, 8vw, 96px);
             font-weight: 900;
             line-height: 1.1;
-            margin-bottom: 24px;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            margin-bottom: 30px;
+            color: var(--brand-white);
             position: relative;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
         
         .hero p {
-            font-size: 20px;
+            font-size: 22px;
             color: var(--light-gray);
             max-width: 700px;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             font-weight: 300;
         }
         
         .hero-buttons {
             display: flex;
-            gap: 24px;
+            gap: 30px;
             flex-wrap: wrap;
-            margin-top: 30px;
-        }
-        
-        .btn-new {
-            display: inline-block;
-            padding: 18px 48px;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: 700;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            transition: all 0.4s;
-            position: relative;
-            overflow: hidden;
-            border: none;
-            cursor: pointer;
+            margin-top: 40px;
         }
         
         .btn-primary-new {
-            background: var(--gradient-primary);
-            color: var(--black);
-            box-shadow: 0 10px 40px rgba(10, 157, 142, 0.3);
+            display: inline-block;
+            padding: 22px 56px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid var(--brand-red);
+            color: var(--brand-white);
+            background: var(--brand-red);
+            box-shadow: 0 8px 30px rgba(220, 20, 60, 0.4);
         }
         
         .btn-primary-new:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 60px rgba(10, 157, 142, 0.5);
+            box-shadow: 0 15px 45px rgba(220, 20, 60, 0.6);
+            background: var(--brand-red-dark);
         }
         
         .btn-primary-new::before {
@@ -196,7 +193,30 @@
             left: 100%;
         }
         
-        /* Premium Sections */
+        .btn-outline-new {
+            display: inline-block;
+            padding: 22px 56px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.4s;
+            border: 2px solid var(--brand-red);
+            color: var(--brand-red);
+            background: transparent;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-outline-new:hover {
+            transform: translateY(-5px);
+            background: var(--brand-red);
+            color: var(--brand-white);
+            box-shadow: 0 8px 30px rgba(220, 20, 60, 0.3);
+        }
+        
+        /* Premium Sections - Clean White Background */
         section {
             padding: 160px 60px;
             position: relative;
@@ -212,19 +232,17 @@
             font-size: 56px;
             font-weight: 900;
             margin-bottom: 20px;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--brand-black);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
         
         .section-title h2 span {
-            color: var(--gold);
+            color: var(--brand-red);
         }
         
         .section-title p {
             font-size: 20px;
-            color: var(--light-gray);
+            color: var(--mid-gray);
             max-width: 600px;
             margin: 0 auto;
             font-weight: 300;
@@ -232,7 +250,7 @@
         
         /* Premium Gallery - OUR WORK (Above Services) */
         .gallery {
-            background: var(--deep-charcoal);
+            background: var(--brand-white);
         }
         
         .gallery-grid {
@@ -248,9 +266,9 @@
             border-radius: 24px;
             overflow: hidden;
             aspect-ratio: 16/9;
-            background: var(--charcoal);
-            border: 1px solid rgba(200, 166, 107, 0.15);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            background: var(--brand-white);
+            border: 2px solid var(--brand-red);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
         }
         
         .gallery-item img {
@@ -268,21 +286,20 @@
             position: absolute;
             bottom: 24px;
             left: 24px;
-            background: var(--gold);
-            color: var(--black);
-            padding: 10px 24px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 700;
+            background: var(--brand-red);
+            color: var(--brand-white);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 15px rgba(220, 20, 60, 0.4);
         }
         
-        /* Premium Services */
+        /* Premium Services - Brand Red Accents */
         .services {
-            background: linear-gradient(to right, var(--charcoal) 0%, var(--deep-charcoal) 100%);
+            background: var(--brand-white);
         }
         
         .services-grid {
@@ -294,15 +311,14 @@
         }
         
         .service-card-new {
-            background: var(--deep-charcoal);
-            border: 1px solid rgba(200, 166, 107, 0.1);
+            background: var(--brand-white);
+            border: 2px solid var(--brand-red);
             border-radius: 24px;
             padding: 50px 40px;
             transition: all 0.5s;
             position: relative;
             overflow: hidden;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
         
         .service-card-new::before {
@@ -312,50 +328,46 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: var(--gold);
-            opacity: 0;
+            background: var(--brand-red);
+            opacity: 1;
             transition: opacity 0.3s;
         }
         
         .service-card-new:hover {
             transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-            border-color: rgba(200, 166, 107, 0.3);
-        }
-        
-        .service-card-new:hover::before {
-            opacity: 1;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+            border-color: var(--brand-red-dark);
         }
         
         .service-card-new .icon {
             font-size: 56px;
             margin-bottom: 28px;
-            color: var(--teal);
+            color: var(--brand-red);
         }
         
         .service-card-new h3 {
             font-size: 24px;
             font-weight: 700;
             margin-bottom: 16px;
-            color: var(--white);
+            color: var(--brand-black);
         }
         
         .service-card-new p {
-            color: var(--light-gray);
+            color: var(--mid-gray);
             line-height: 1.7;
             margin-bottom: 20px;
             font-weight: 300;
         }
         
         .service-card-new .price {
-            color: var(--teal);
+            color: var(--brand-red);
             font-weight: 800;
             font-size: 20px;
         }
         
-        /* Premium Pricing */
+        /* Premium Pricing - Silver & Red */
         .pricing {
-            background: linear-gradient(to right, var(--charcoal) 0%, var(--deep-charcoal) 100%);
+            background: var(--brand-white);
         }
         
         .pricing-grid {
@@ -367,50 +379,64 @@
         }
         
         .price-card {
-            background: var(--deep-charcoal);
+            background: var(--brand-white);
             border-radius: 24px;
-            padding: 50px;
+            padding: 60px;
             text-align: center;
-            border: 1px solid rgba(200, 166, 107, 0.15);
+            border: 2px solid var(--brand-silver);
             transition: all 0.4s;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
         
         .price-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(0, 157, 142, 0.3);
-            border-color: rgba(200, 166, 107, 0.3);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+            border-color: var(--brand-red);
         }
         
         .price-card h3 {
             font-family: 'Playfair Display', serif;
             font-size: 28px;
-            margin-bottom: 20px;
-            color: var(--white);
+            margin-bottom: 24px;
+            color: var(--brand-black);
         }
         
         .price-card .amount {
-            font-size: 48px;
+            font-size: 52px;
             font-weight: 900;
-            color: var(--gold);
+            color: var(--brand-red);
             margin-bottom: 16px;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
         
         .price-card p {
-            color: var(--light-gray);
+            color: var(--mid-gray);
             font-weight: 300;
             margin-bottom: 24px;
         }
         
-        /* Premium Contact */
+        /* Premium Contact - Brand Red Theme */
         .contact {
-            background: linear-gradient(to right, var(--charcoal) 0%, var(--deep-charcoal) 100%);
+            background: linear-gradient(135deg, var(--brand-black) 0%, var(--royal-blue) 100%);
         }
         
         .contact-container {
             max-width: 900px;
             margin: 0 auto;
             text-align: center;
+        }
+        
+        .contact .section-title h2 {
+            color: var(--brand-white);
+            text-shadow: none;
+        }
+        
+        .contact .section-title h2 span {
+            color: var(--brand-silver);
+        }
+        
+        .contact .section-title p {
+            color: var(--light-gray);
         }
         
         .social-tabs {
@@ -428,15 +454,14 @@
             padding: 16px 28px;
             border-radius: 12px;
             text-decoration: none;
-            color: var(--white);
+            color: var(--brand-black);
             font-weight: 600;
             transition: all 0.4s;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 2px solid var(--brand-silver);
             font-size: 15px;
-            backdrop-filter: blur(10px);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         
         .social-tab-new:hover {
@@ -460,43 +485,45 @@
         }
         
         .social-tab-new.whatsapp {
-            background: rgba(37, 211, 102, 0.15);
-            border-color: rgba(37, 211, 102, 0.4);
+            background: rgba(37, 211, 102, 0.9);
+            border-color: #25D366;
         }
         
         .social-tab-new.whatsapp:hover {
             background: #25D366;
-            color: var(--black);
+            color: var(--brand-black);
         }
         
         .social-tab-new.tiktok {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.15);
+            background: var(--brand-white);
+            border-color: #FF0050;
+            color: #010101;
         }
         
         .social-tab-new.tiktok:hover {
-            background: #010101;
+            background: #FF0050;
+            color: var(--brand-white);
             border-color: #FF0050;
         }
         
         .social-tab-new.facebook {
-            background: rgba(24, 119, 242, 0.15);
-            border-color: rgba(24, 119, 242, 0.4);
+            background: var(--brand-white);
+            border-color: #1877F2;
         }
         
         .social-tab-new.facebook:hover {
             background: #1877F2;
-            color: var(--black);
+            color: var(--brand-white);
         }
         
         .social-tab-new.email {
-            background: rgba(23, 165, 209, 0.15);
-            border-color: rgba(23, 165, 209, 0.4);
+            background: var(--brand-white);
+            border-color: var(--brand-silver);
         }
         
         .social-tab-new.email:hover {
-            background: #18BCBC;
-            color: var(--black);
+            background: var(--brand-red);
+            color: var(--brand-white);
         }
         
         .social-tab-new svg {
@@ -505,62 +532,29 @@
             flex-shrink: 0;
         }
         
-        /* Premium Map */
-        .map-section {
-            background: var(--deep-charcoal);
-            padding: 120px 60px 80px;
-        }
-        
-        .map-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 60px;
-        }
-        
-        .map-frame {
-            width: 100%;
-            height: 450px;
-            border-radius: 24px;
-            border: 1px solid rgba(200, 166, 107, 0.15);
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-        }
-        
-        .map-frame iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        .map-info {
-            text-align: center;
-            margin-top: 24px;
-            color: var(--light-gray);
-            font-size: 15px;
-        }
-        
-        /* Premium Footer */
+        /* Premium Footer - Brand Red */
         footer {
-            background: var(--deep-charcoal);
-            padding: 50px 60px;
+            background: var(--brand-black);
+            padding: 60px 60px;
             text-align: center;
-            border-top: 1px solid rgba(200, 166, 107, 0.15);
+            border-top: 4px solid var(--brand-red);
         }
         
         footer p {
-            color: var(--light-gray);
+            color: var(--brand-silver);
             font-size: 15px;
         }
         
         footer .portfolio-link {
-            color: var(--gold);
+            color: var(--brand-red);
             text-decoration: none;
             font-weight: 700;
             transition: color 0.3s;
         }
         
         footer .portfolio-link:hover {
-            color: var(--white);
+            color: var(--brand-white);
+            text-decoration: underline;
         }
         
         /* Animation */
@@ -631,8 +625,8 @@
         <h1>Premium <br>Cleaning Services</h1>
         <p class="fade-in">Professional carpet and couch deep cleaning with steam technology. Restore your spaces to pristine condition with our expert techniques.</p>
         <div class="hero-buttons">
-            <a href="#pricing" class="btn btn-primary-new">See Pricing</a>
-            <a href="#contact" class="btn btn-outline-new">Book Now</a>
+            <a href="#pricing" class="btn btn-primary-new fade-in">See Pricing</a>
+            <a href="#contact" class="btn btn-outline-new fade-in">Book Now</a>
         </div>
     </section>
 
@@ -743,7 +737,7 @@
                     <span>TikTok</span>
                 </a>
                 <a href="https://www.facebook.com/tshepomontshoni" class="social-tab-new facebook" target="_blank">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373 12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                     <span>Facebook</span>
                 </a>
                 <a href="https://www.instagram.com/tshepomontshoni" class="social-tab-new email" target="_blank">
@@ -761,7 +755,7 @@
     <!-- Premium Footer -->
     <footer>
         <p>© 2026 <strong>MS Magaetswale Solutions | Thabang Lehau | SiteCraft SA</strong>. Premium cleaning services for South African homes.</p>
-        <p style="margin-top:12px; color: var(--light-gray);">
+        <p style="margin-top:12px; color: var(--brand-silver);">
             Portfolio by <a href="https://thabs1234.github.io/portfolio/" target="_blank" class="portfolio-link">Thabang Lehau</a> | <a href="https://thabs1234.github.io/portfolio/" target="_blank" class="portfolio-link">SiteCraft SA</a>
         </p>
     </footer>
