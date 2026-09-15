@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Magaetswale Solutions - Premium Carpet & Couch Deep Cleaning Services in Soweto, Johannesburg">
-    <title>Magaetswale Solutions | Carpet & Couch Cleaning</title>
+    <title>Magaetswale Solutions | Premium Cleaning Services</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --inkling-red: #EF476F;
-            --premium-gold: #FFD700;
-            --deep-charcoal: #0A0A0A;
-            --rich-black: #000000;
-            --diamond-white: #F8F9FA;
-            --platinum: #E5E5E5;
-            --warm-gray: #A8A8A8;
-            --emerald-green: #00FF9D;
-            --gradient-primary: linear-gradient(135deg, #EF476F 0%, #FFD700 50%, #00FF9D 100%);
+            --navy: #0C142F;
+            --teal: #0A9D8E;
+            --charcoal: #1A1A1A;
+            --deep-charcoal: #0F0F0F;
+            --black: #000000;
+            --white: #FFFFFF;
+            --off-white: #F5F5F5;
+            --light-gray: #E0E0E0;
+            --gold: #C9A66B;
+            --gradient-primary: linear-gradient(135deg, #0C142F 0%, #0A9D8E 50%, #C9A66B 100%);
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            background: var(--rich-black);
-            color: var(--diamond-white);
+            background: var(--black);
+            color: var(--off-white);
             overflow-x: hidden;
             line-height: 1.6;
         }
@@ -39,8 +40,8 @@
             right: 0;
             z-index: 1000;
             backdrop-filter: blur(20px);
-            background: rgba(10, 10, 10, 0.85);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(12, 20, 47, 0.85);
+            border-bottom: 1px solid rgba(200, 166, 107, 0.2);
             padding: 18px 60px;
             display: flex;
             justify-content: space-between;
@@ -70,7 +71,7 @@
         }
         
         .logo-span {
-            color: var(--platinum);
+            color: var(--gold);
         }
         
         nav ul {
@@ -80,18 +81,17 @@
         }
         
         nav a {
-            color: var(--warm-gray);
+            color: var(--light-gray);
             text-decoration: none;
             font-size: 15px;
             font-weight: 500;
-            text-transform: uppercase;
             letter-spacing: 1.5px;
             transition: color 0.3s;
             position: relative;
         }
         
         nav a:hover {
-            color: var(--diamond-white);
+            color: var(--white);
         }
         
         nav a::after {
@@ -101,7 +101,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--premium-gold);
+            background: var(--gold);
             transition: width 0.3s;
         }
         
@@ -121,9 +121,9 @@
             position: relative;
             overflow: hidden;
             background: 
-                linear-gradient(135deg, #0A0A0A 0%, #111 100%),
-                radial-gradient(ellipse at top left, rgba(239, 71, 111, 0.08) 0%, transparent 40%),
-                radial-gradient(ellipse at bottom right, rgba(0, 255, 157, 0.03) 0%, transparent 40%);
+                linear-gradient(135deg, var(--navy) 0%, var(--charcoal) 100%),
+                radial-gradient(ellipse at top left, rgba(10, 157, 142, 0.08) 0%, transparent 40%),
+                radial-gradient(ellipse at bottom right, rgba(201, 166, 107, 0.03) 0%, transparent 40%);
         }
         
         .hero h1 {
@@ -141,7 +141,7 @@
         
         .hero p {
             font-size: 20px;
-            color: var(--warm-gray);
+            color: var(--light-gray);
             max-width: 700px;
             margin-bottom: 40px;
             font-weight: 300;
@@ -172,13 +172,13 @@
         
         .btn-primary-new {
             background: var(--gradient-primary);
-            color: var(--rich-black);
-            box-shadow: 0 10px 40px rgba(239, 71, 111, 0.3);
+            color: var(--black);
+            box-shadow: 0 10px 40px rgba(10, 157, 142, 0.3);
         }
         
         .btn-primary-new:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 60px rgba(239, 71, 111, 0.5);
+            box-shadow: 0 20px 60px rgba(10, 157, 142, 0.5);
         }
         
         .btn-primary-new::before {
@@ -219,18 +219,18 @@
         }
         
         .section-title h2 span {
-            color: var(--platinum);
+            color: var(--gold);
         }
         
         .section-title p {
             font-size: 20px;
-            color: var(--warm-gray);
+            color: var(--light-gray);
             max-width: 600px;
             margin: 0 auto;
             font-weight: 300;
         }
         
-        /* Premium Gallery - ABOVE SERVICES */
+        /* Premium Gallery - OUR WORK (Above Services) */
         .gallery {
             background: var(--deep-charcoal);
         }
@@ -248,27 +248,28 @@
             border-radius: 24px;
             overflow: hidden;
             aspect-ratio: 16/9;
-            background: var(--deep-charcoal);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: var(--charcoal);
+            border: 1px solid rgba(200, 166, 107, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
         
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.8s;
+            transition: transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
         }
         
         .gallery-item:hover img {
-            transform: scale(1.08);
+            transform: scale(1.1);
         }
         
         .gallery-item .label {
             position: absolute;
             bottom: 24px;
             left: 24px;
-            background: rgba(239, 71, 111, 0.9);
-            color: var(--rich-black);
+            background: var(--gold);
+            color: var(--black);
             padding: 10px 24px;
             border-radius: 20px;
             font-size: 14px;
@@ -276,15 +277,12 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             backdrop-filter: blur(10px);
-        }
-        
-        .gallery-item .label.after {
-            background: rgba(0, 255, 157, 0.95);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
         
         /* Premium Services */
         .services {
-            background: linear-gradient(to right, #111 0%, #0A0A0A 100%);
+            background: linear-gradient(to right, var(--charcoal) 0%, var(--deep-charcoal) 100%);
         }
         
         .services-grid {
@@ -297,13 +295,14 @@
         
         .service-card-new {
             background: var(--deep-charcoal);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(200, 166, 107, 0.1);
             border-radius: 24px;
             padding: 50px 40px;
             transition: all 0.5s;
             position: relative;
             overflow: hidden;
             backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
         
         .service-card-new::before {
@@ -313,7 +312,7 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: var(--gradient-primary);
+            background: var(--gold);
             opacity: 0;
             transition: opacity 0.3s;
         }
@@ -321,7 +320,7 @@
         .service-card-new:hover {
             transform: translateY(-10px);
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-            border-color: rgba(239, 71, 111, 0.3);
+            border-color: rgba(200, 166, 107, 0.3);
         }
         
         .service-card-new:hover::before {
@@ -331,35 +330,32 @@
         .service-card-new .icon {
             font-size: 56px;
             margin-bottom: 28px;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--teal);
         }
         
         .service-card-new h3 {
             font-size: 24px;
             font-weight: 700;
             margin-bottom: 16px;
-            color: var(--diamond-white);
+            color: var(--white);
         }
         
         .service-card-new p {
-            color: var(--warm-gray);
+            color: var(--light-gray);
             line-height: 1.7;
             margin-bottom: 20px;
             font-weight: 300;
         }
         
         .service-card-new .price {
-            color: var(--emerald-green);
+            color: var(--teal);
             font-weight: 800;
             font-size: 20px;
         }
         
         /* Premium Pricing */
         .pricing {
-            background: linear-gradient(to right, #111 0%, #0A0A0A 100%);
+            background: linear-gradient(to right, var(--charcoal) 0%, var(--deep-charcoal) 100%);
         }
         
         .pricing-grid {
@@ -375,39 +371,40 @@
             border-radius: 24px;
             padding: 50px;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(200, 166, 107, 0.15);
             transition: all 0.4s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
         
         .price-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(239, 71, 111, 0.3);
-            border-color: rgba(239, 71, 111, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 157, 142, 0.3);
+            border-color: rgba(200, 166, 107, 0.3);
         }
         
         .price-card h3 {
             font-family: 'Playfair Display', serif;
             font-size: 28px;
             margin-bottom: 20px;
-            color: var(--diamond-white);
+            color: var(--white);
         }
         
         .price-card .amount {
             font-size: 48px;
             font-weight: 900;
-            color: var(--premium-gold);
+            color: var(--gold);
             margin-bottom: 16px;
         }
         
         .price-card p {
-            color: var(--warm-gray);
+            color: var(--light-gray);
             font-weight: 300;
             margin-bottom: 24px;
         }
         
         /* Premium Contact */
         .contact {
-            background: linear-gradient(to right, #111 0%, #0A0A0A 100%);
+            background: linear-gradient(to right, var(--charcoal) 0%, var(--deep-charcoal) 100%);
         }
         
         .contact-container {
@@ -431,7 +428,7 @@
             padding: 16px 28px;
             border-radius: 12px;
             text-decoration: none;
-            color: var(--diamond-white);
+            color: var(--white);
             font-weight: 600;
             transition: all 0.4s;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -439,6 +436,7 @@
             backdrop-filter: blur(10px);
             position: relative;
             overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
         
         .social-tab-new:hover {
@@ -462,18 +460,18 @@
         }
         
         .social-tab-new.whatsapp {
-            background: rgba(37, 211, 102, 0.12);
-            border-color: rgba(37, 211, 102, 0.3);
+            background: rgba(37, 211, 102, 0.15);
+            border-color: rgba(37, 211, 102, 0.4);
         }
         
         .social-tab-new.whatsapp:hover {
             background: #25D366;
-            color: var(--rich-black);
+            color: var(--black);
         }
         
         .social-tab-new.tiktok {
             background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.15);
         }
         
         .social-tab-new.tiktok:hover {
@@ -482,23 +480,23 @@
         }
         
         .social-tab-new.facebook {
-            background: rgba(24, 119, 242, 0.12);
-            border-color: rgba(24, 119, 242, 0.3);
+            background: rgba(24, 119, 242, 0.15);
+            border-color: rgba(24, 119, 242, 0.4);
         }
         
         .social-tab-new.facebook:hover {
             background: #1877F2;
-            color: var(--rich-black);
+            color: var(--black);
         }
         
         .social-tab-new.email {
-            background: rgba(234, 67, 53, 0.12);
-            border-color: rgba(234, 67, 53, 0.3);
+            background: rgba(23, 165, 209, 0.15);
+            border-color: rgba(23, 165, 209, 0.4);
         }
         
         .social-tab-new.email:hover {
-            background: #EA4335;
-            color: var(--rich-black);
+            background: #18BCBC;
+            color: var(--black);
         }
         
         .social-tab-new svg {
@@ -523,7 +521,7 @@
             width: 100%;
             height: 450px;
             border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(200, 166, 107, 0.15);
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
@@ -537,7 +535,7 @@
         .map-info {
             text-align: center;
             margin-top: 24px;
-            color: var(--warm-gray);
+            color: var(--light-gray);
             font-size: 15px;
         }
         
@@ -546,23 +544,23 @@
             background: var(--deep-charcoal);
             padding: 50px 60px;
             text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-top: 1px solid rgba(200, 166, 107, 0.15);
         }
         
         footer p {
-            color: var(--warm-gray);
+            color: var(--light-gray);
             font-size: 15px;
         }
         
         footer .portfolio-link {
-            color: var(--premium-gold);
+            color: var(--gold);
             text-decoration: none;
             font-weight: 700;
             transition: color 0.3s;
         }
         
         footer .portfolio-link:hover {
-            color: var(--diamond-white);
+            color: var(--white);
         }
         
         /* Animation */
@@ -618,12 +616,11 @@
     <nav>
         <div class="logo-container">
             <img src="logo_80b50e.jpg" alt="Magaetswale Solutions Logo" class="logo-image">
-            <div class="logo-text">MS Magaetswale<span class="logo-span">.</span></div>
+            <div class="logo-text">MS <span class="logo-span">Magaetswale</span></div>
         </div>
         <ul>
             <li><a href="#services">Services</a></li>
             <li><a href="#work">Gallery</a></li>
-            <li><a href="#logos">Branding</a></li>
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -632,7 +629,7 @@
     <!-- Premium Hero -->
     <section class="hero">
         <h1>Premium <br>Cleaning Services</h1>
-        <p class="fade-in">Deep cleaning solutions for carpets, couches, and upholstery. Steam cleaning technology with before/after results guaranteed.</p>
+        <p class="fade-in">Professional carpet and couch deep cleaning with steam technology. Restore your spaces to pristine condition with our expert techniques.</p>
         <div class="hero-buttons">
             <a href="#pricing" class="btn btn-primary-new">See Pricing</a>
             <a href="#contact" class="btn btn-outline-new">Book Now</a>
@@ -647,11 +644,11 @@
         </div>
         <div class="gallery-grid">
             <div class="gallery-item fade-in">
-                <img src="WhatsApp_Image_2026-09-14_at_16.13.57_6698b9.jpg" alt="Couch deep cleaning service with fresh results">
+                <img src="WhatsApp_Image_2026-09-14_at_16.13.57_6698b9.jpg" alt="Couch deep cleaning with fresh results">
                 <div class="label">Couch Deep Cleaning</div>
             </div>
             <div class="gallery-item fade-in">
-                <img src="WhatsApp_Image_2026-09-09_at_11.39.26_5f26e3.jpg" alt="Carpet cleaning with professional results">
+                <img src="WhatsApp_Image_2026-09-09_at_11.39.26_5f26e3.jpg" alt="Professional carpet cleaning service">
                 <div class="label">Carpet Cleaning</div>
             </div>
             <div class="gallery-item fade-in">
@@ -665,7 +662,7 @@
     <section class="services" id="services">
         <div class="section-title">
             <h2>Our <span>Services</span></h2>
-            <p>Premium cleaning solutions with professional-grade equipment and steam technology</p>
+            <p>Comprehensive cleaning solutions with professional-grade equipment and steam technology</p>
         </div>
         <div class="services-grid">
             <div class="service-card-new fade-in">
@@ -677,7 +674,7 @@
             <div class="service-card-new fade-in">
                 <div class="icon">🧶</div>
                 <h3>Carpet Cleaning</h3>
-                <p>Deep carpet cleaning that removes 99% of dirt, dust, and allergens. Gives your floors a fresh, clean, and brand new look!</p>
+                <p>Deep carpet cleaning that removes 99% of dirt, dust, and allergens. Gives your floors a fresh, clean, brand new look!</p>
                 <div class="price">From R200</div>
             </div>
             <div class="service-card-new fade-in">
@@ -729,26 +726,6 @@
         </div>
     </section>
 
-    <!-- Brand Logos Gallery -->
-    <section class="logo-gallery" id="logos">
-        <div class="section-title">
-            <h2>Brand <span>Assets</span></h2>
-            <p>Official logos and branding materials</p>
-        </div>
-        <div class="logo-grid">
-            <div class="logo-item fade-in">
-                <img src="logo_80b50e.jpg" alt="Magaetswale Solutions Logo 1">
-                <h3>Main Logo</h3>
-                <p>Official brand identity</p>
-            </div>
-            <div class="logo-item fade-in">
-                <img src="logo_e855d3.jpg" alt="Magaetswale Solutions Logo 2">
-                <h3>Alternate Logo</h3>
-                <p>Fallback brand identity</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Premium Contact -->
     <section class="contact" id="contact">
         <div class="section-title">
@@ -769,7 +746,7 @@
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                     <span>Facebook</span>
                 </a>
-                <a href="https://www.instagram.com/tshepomontshoni" class="social-tab-new instagram" target="_blank">
+                <a href="https://www.instagram.com/tshepomontshoni" class="social-tab-new email" target="_blank">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                     <span>Instagram</span>
                 </a>
@@ -781,26 +758,10 @@
         </div>
     </section>
 
-    <!-- Map Section -->
-    <section class="map-section" id="location">
-        <div class="section-title fade-in" style="padding-top:100px;">
-            <h2>Find <span>Our Studio</span></h2>
-            <p>287 Tau Street, Diepkloof Ext Phase 1, Soweto, Johannesburg</p>
-        </div>
-        <div class="map-container fade-in">
-            <div class="map-frame">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.5!2d27.9618254!3d-26.2480841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950978ca92d591%3A0x9be2813144a15e64!2sTshepo%27s%20cleaning%20services%20and%20carwash!5e0!3m2!1sen!2sza!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <p class="map-info">
-                📍 GPS: -26.248°S, 27.962°E | Studio Location | Soweto, Johannesburg
-            </p>
-        </div>
-    </section>
-
     <!-- Premium Footer -->
     <footer>
         <p>© 2026 <strong>MS Magaetswale Solutions | Thabang Lehau | SiteCraft SA</strong>. Premium cleaning services for South African homes.</p>
-        <p style="margin-top:12px; color: var(--warm-gray);">
+        <p style="margin-top:12px; color: var(--light-gray);">
             Portfolio by <a href="https://thabs1234.github.io/portfolio/" target="_blank" class="portfolio-link">Thabang Lehau</a> | <a href="https://thabs1234.github.io/portfolio/" target="_blank" class="portfolio-link">SiteCraft SA</a>
         </p>
     </footer>
@@ -816,15 +777,6 @@
         }, { threshold: 0.1 });
         
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-        
-        // Premium Cursor Effect
-        document.addEventListener('mousemove', (e) => {
-            const xAxis = (window.innerWidth / 2 - e.clientX) / 25;
-            const yAxis = (window.innerHeight / 2 - e.clientY) / 25;
-            document.querySelectorAll('.wd-avatar').forEach(el => {
-                el.style.transform = `translateY(${yAxis}px)`;
-            });
-        });
     </script>
 </body>
 </html>
