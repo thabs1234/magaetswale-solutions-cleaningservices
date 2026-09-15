@@ -54,7 +54,7 @@
         }
         
         .logo-image {
-            height: 40px;
+            height: 160px;
             width: auto;
         }
         
@@ -230,6 +230,58 @@
             font-weight: 300;
         }
         
+        /* Premium Gallery - ABOVE SERVICES */
+        .gallery {
+            background: var(--deep-charcoal);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 32px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            aspect-ratio: 16/9;
+            background: var(--deep-charcoal);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+        
+        .gallery-item .label {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            background: rgba(239, 71, 111, 0.9);
+            color: var(--rich-black);
+            padding: 10px 24px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .gallery-item .label.after {
+            background: rgba(0, 255, 157, 0.95);
+        }
+        
         /* Premium Services */
         .services {
             background: linear-gradient(to right, #111 0%, #0A0A0A 100%);
@@ -303,106 +355,6 @@
             color: var(--emerald-green);
             font-weight: 800;
             font-size: 20px;
-        }
-        
-        /* Premium Gallery */
-        .gallery {
-            background: var(--deep-charcoal);
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 32px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .gallery-item {
-            position: relative;
-            border-radius: 24px;
-            overflow: hidden;
-            aspect-ratio: 16/9;
-            background: var(--deep-charcoal);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.8s;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.08);
-        }
-        
-        .gallery-item .label {
-            position: absolute;
-            bottom: 24px;
-            left: 24px;
-            background: rgba(239, 71, 111, 0.9);
-            color: var(--rich-black);
-            padding: 10px 24px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            backdrop-filter: blur(10px);
-        }
-        
-        .gallery-item .label.after {
-            background: rgba(0, 255, 157, 0.95);
-        }
-        
-        /* Logo Gallery Section */
-        .logo-gallery {
-            background: var(--deep-charcoal);
-        }
-        
-        .logo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .logo-item {
-            background: var(--deep-charcoal);
-            border-radius: 24px;
-            padding: 40px;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.5s;
-        }
-        
-        .logo-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-            border-color: rgba(239, 71, 111, 0.3);
-        }
-        
-        .logo-item img {
-            max-height: 120px;
-            width: auto;
-            margin: 0 auto 24px;
-            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
-        }
-        
-        .logo-item h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 20px;
-            color: var(--diamond-white);
-            margin-bottom: 12px;
-        }
-        
-        .logo-item p {
-            color: var(--warm-gray);
-            font-weight: 300;
-            font-size: 14px;
         }
         
         /* Premium Pricing */
@@ -670,7 +622,7 @@
         </div>
         <ul>
             <li><a href="#services">Services</a></li>
-            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#work">Gallery</a></li>
             <li><a href="#logos">Branding</a></li>
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -684,6 +636,28 @@
         <div class="hero-buttons">
             <a href="#pricing" class="btn btn-primary-new">See Pricing</a>
             <a href="#contact" class="btn btn-outline-new">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Premium Gallery - OUR WORK (Above Services) -->
+    <section class="gallery" id="work">
+        <div class="section-title">
+            <h2>See <span>Our Work</span></h2>
+            <p>Showcase of our professional cleaning results and before/after transformations</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item fade-in">
+                <img src="WhatsApp_Image_2026-09-14_at_16.13.57_6698b9.jpg" alt="Couch deep cleaning service with fresh results">
+                <div class="label">Couch Deep Cleaning</div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="WhatsApp_Image_2026-09-09_at_11.39.26_5f26e3.jpg" alt="Carpet cleaning with professional results">
+                <div class="label">Carpet Cleaning</div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="WhatsApp_Image_2026-09-10_at_08.25.28_26bb9c.jpg" alt="Professional interior cleaning workspace">
+                <div class="label">Workspace Interior</div>
+            </div>
         </div>
     </section>
 
@@ -711,48 +685,6 @@
                 <h3>Office & Commercial</h3>
                 <p>Professional office carpet cleaning at R35 per square meter. Safe and eco-friendly steam cleaning for your workplace.</p>
                 <div class="price">R35/sqm</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Premium Gallery -->
-    <section class="gallery" id="gallery">
-        <div class="section-title">
-            <h2>Cleaning <span>Gallery</span></h2>
-            <p>Inside our workspace and professional service photos</p>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item fade-in">
-                <img src="WhatsApp_Image_2026-09-14_at_16.13.57_6698b9.jpg" alt="Couch deep cleaning service with before/after results">
-                <div class="label">Couch Cleaning Flyer</div>
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="WhatsApp_Image_2026-09-09_at_11.39.26_5f26e3.jpg" alt="Carpet cleaning flyer with pricing from R100-R500">
-                <div class="label">Carpet Cleaning Flyer</div>
-            </div>
-            <div class="gallery-item fade-in">
-                <img src="WhatsApp_Image_2026-09-10_at_08.25.28_26bb9c.jpg" alt="Professional interior cleaning showcase with brown sectional sofa">
-                <div class="label">Workspace Interior</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Brand Logos Gallery -->
-    <section class="logo-gallery" id="logos">
-        <div class="section-title">
-            <h2>Brand <span>Assets</span></h2>
-            <p>Official logos and branding materials</p>
-        </div>
-        <div class="logo-grid">
-            <div class="logo-item fade-in">
-                <img src="logo_80b50e.jpg" alt="Magaetswale Solutions Logo 1">
-                <h3>Main Logo</h3>
-                <p>Official brand identity</p>
-            </div>
-            <div class="logo-item fade-in">
-                <img src="logo_e855d3.jpg" alt="Magaetswale Solutions Logo 2">
-                <h3>Alternate Logo</h3>
-                <p>Fallback brand identity</p>
             </div>
         </div>
     </section>
@@ -793,6 +725,26 @@
                 <h3>Standard Rug</h3>
                 <div class="amount">R200</div>
                 <p>Professional carpet cleaning</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Logos Gallery -->
+    <section class="logo-gallery" id="logos">
+        <div class="section-title">
+            <h2>Brand <span>Assets</span></h2>
+            <p>Official logos and branding materials</p>
+        </div>
+        <div class="logo-grid">
+            <div class="logo-item fade-in">
+                <img src="logo_80b50e.jpg" alt="Magaetswale Solutions Logo 1">
+                <h3>Main Logo</h3>
+                <p>Official brand identity</p>
+            </div>
+            <div class="logo-item fade-in">
+                <img src="logo_e855d3.jpg" alt="Magaetswale Solutions Logo 2">
+                <h3>Alternate Logo</h3>
+                <p>Fallback brand identity</p>
             </div>
         </div>
     </section>
